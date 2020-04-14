@@ -1,3 +1,4 @@
 #!/usr/bin/env node
+import engine from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
+engine(1);

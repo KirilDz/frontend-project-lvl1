@@ -1,4 +1,4 @@
-import { generator, answer, wrongAnswer } from '../helper.js';
+import { generator, answer, wrongAnswer, resultDefenition } from '../helper.js';
 
 const calc = () => {
   const num1 = generator();
@@ -16,12 +16,7 @@ const calc = () => {
   } else {
     result = num1 * num2;
   }
-
-  if (Number(userResult) !== result) {
-    wrongAnswer(userResult, result);
-    return false;
-  }
-  return true;
+  return resultDefenition(userResult, result);
 };
 
 export default calc;

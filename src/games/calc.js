@@ -1,4 +1,6 @@
-import { generator, answer, wrongAnswer, resultDefenition } from '../helper.js';
+import {
+  generator, answer, resultDefenition,
+} from '../helper.js';
 
 const calc = () => {
   const num1 = generator();

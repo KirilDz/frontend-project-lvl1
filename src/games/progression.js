@@ -1,4 +1,6 @@
-import { generator, answer, wrongAnswer, resultDefenition } from '../helper.js';
+import {
+  generator, answer, resultDefenition,
+} from '../helper.js';
 
 const progressionMaker = () => {
   const startProgression = generator();

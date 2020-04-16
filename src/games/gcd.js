@@ -1,5 +1,5 @@
 import {
-  generator, answer, wrongAnswer, resultDefenition
+  generator, answer, resultDefenition,
 } from '../helper.js';
 
 const gcd = () => {

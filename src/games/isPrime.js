@@ -1,4 +1,5 @@
-import { generator, answer, wrongAnswer, resultDefenition
+import {
+  generator, answer, wrongAnswer,
 } from '../helper.js';
 
 const isPrime = () => {

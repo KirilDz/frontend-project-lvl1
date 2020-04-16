@@ -13,45 +13,34 @@ export const wrongAnswer = (userAnswer, correctAnswer) => console.log(`"${userAn
 export const congratMassage = () => console.log(`Congratulations, ${userName}!`);
 
 export const gameDescription = (switcher) => {
-  const evenDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const calcDescription = 'What is the result of the expression?';
-  const gcdDescription = 'Find the greatest common divisor of given numbers.';
-  const progressionDescription = 'What number is missing in the progression?';
-  const isPrimeDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  if (switcher === 1) {
-    console.log(evenDescription);
-  }
-  if (switcher === 2) {
-    console.log(calcDescription);
-  }
-  if (switcher === 3) {
-    console.log(gcdDescription);
-  }
-  if (switcher === 4) {
-    console.log(progressionDescription);
-  }
-  if (switcher === 5) {
-    console.log(isPrimeDescription);
-  }
+  const descriptionArr = [
+    'Answer "yes" if the number is even, otherwise answer "no".',
+    'What is the result of the expression?',
+    'Find the greatest common divisor of given numbers.',
+    'What number is missing in the progression?',
+    'Answer "yes" if given number is prime. Otherwise answer "no".',
+  ];
+
+  console.log(descriptionArr[switcher]);
 };
 
 export const gameDefinition = (switcher) => {
-  if (switcher === 1) {
-    return brain();
+  let currentGame;
+
+  if (switcher === 0) {
+    currentGame = brain();
+  } else if (switcher === 1) {
+    currentGame = calc();
+  } else if (switcher === 2) {
+    currentGame = gcd();
+  } else if (switcher === 3) {
+    currentGame = progression();
+  } else if (switcher === 4) {
+    currentGame = isPrime();
   }
-  if (switcher === 2) {
-    return calc();
-  }
-  if (switcher === 3) {
-    return gcd();
-  }
-  if (switcher === 4) {
-    return progression();
-  }
-  if (switcher === 5) {
-    return isPrime();
-  }
+  return currentGame;
 };
+
 
 export const resultDefenition = (userResult, result) => {
   if (Number(userResult) !== result) {

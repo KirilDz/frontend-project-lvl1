@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 import engine from '../src/index.js';
 
-engine(3);
+engine(2);

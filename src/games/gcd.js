@@ -9,7 +9,7 @@ const gcd = () => {
   const userResult = answer();
   const smallerNum = num1 > num2 ? num2 : num1;
   let result = 0;
-  for (let i = 1; i <= smallerNum; i++) {
+  for (let i = 1; i <= smallerNum; i += 1) {
     if (num1 % i === 0 && num2 % i === 0) {
       result = i;
     }

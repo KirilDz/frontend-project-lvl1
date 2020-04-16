@@ -1,4 +1,5 @@
-import { generator, answer, wrongAnswer, resultDefenition } from '../helper.js';
+import { generator, answer, wrongAnswer, resultDefenition
+} from '../helper.js';
 
 const isPrime = () => {
   const num = generator();
@@ -6,7 +7,7 @@ const isPrime = () => {
   const userAnswer = answer();
   const userResult = userAnswer === 'yes';
   let result = true;
-  for (let i = 2; i < num; i++) {
+  for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       result = false;
       break;

@@ -4,7 +4,7 @@ const progressionMaker = () => {
   const startProgression = generator();
   const stepProgression = Math.round(Math.random() * 10);
   const arr = [startProgression];
-  for (let i = 1; i < 10; i++) {
+  for (let i = 1; i < 10; i += 1) {
     arr.push(arr[i - 1] + stepProgression);
   }
   return arr;

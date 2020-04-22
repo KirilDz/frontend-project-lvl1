@@ -1,19 +1,18 @@
-import { congratMassage, gameDescription, gameDefinition } from './helper.js';
+import { congratMassage, answer, wrongAnswer } from './helper.js';
 
-const engine = (switcher) => {
-  gameDescription(switcher);
-  let count = 0;
+const engine = (data, startMassage) => {
+  console.log(startMassage);
   for (let i = 0; i < 3; i += 1) {
-    const result = gameDefinition(switcher);
-    if (result) {
+    console.log(`Question: ${data[0][i]}`);
+    const userAnswer = answer();
+    if (userAnswer === `${data[1][i]}`) {
       console.log('Correct!');
-    } else {
-      break;
     }
-    count += 1;
+    if (userAnswer !== `${data[1][i]}`) {
+      return wrongAnswer(userAnswer, data[1][i]);
+    }
   }
-  if (count === 3) {
-    congratMassage();
-  }
+  return congratMassage();
 };
+
 export default engine;

@@ -1,21 +1,25 @@
-import { generator } from '../helper.js';
+import { generator, questionCounter } from '../helper.js';
 import engine from '../index.js';
+import {cons, car, cdr} from '../base.js';
 
 const calc = () => {
-  const gameData = [[], []];
-  for (let i = 0; i < 3; i += 1) {
+  const gameData = [];
+  for (let i = 0; i < questionCounter; i += 1) {
     const num1 = generator(1, 100);
     const num2 = generator(1, 100);
-    const operandGen = Math.round(Math.random() * 2);
     const arr = ['+', '-', '*'];
+    const operandGen = generator(0, arr.length);
     const expression = `${num1} ${arr[operandGen]} ${num2}`;
-    gameData[0].push(expression);
-    if (arr[operandGen] === '+') {
-      gameData[1].push(num1 + num2);
-    } else if (arr[operandGen] === '-') {
-      gameData[1].push(num1 - num2);
-    } else {
-      gameData[1].push(num1 * num2);
+    switch (arr[operandGen]) {
+      case "+":
+        gameData.push(cons(expression, num1+num2));
+        break;
+      case "-":
+        gameData.push(cons(expression, num1-num2));
+        break;
+      case "*":
+        gameData.push(cons(expression, num1*num2));
+        break;
     }
   }
   return gameData;

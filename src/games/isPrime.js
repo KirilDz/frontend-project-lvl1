@@ -1,24 +1,23 @@
-import { generator } from '../helper.js';
+import { generator, questionCounter } from '../helper.js';
 import engine from '../index.js';
+import {cons, car, cdr} from '../base.js';
 
 const isPrimeChecker = (num) => {
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const isPrime = () => {
-  const gameData = [[], []];
-  for (let i = 0; i < 3; i += 1) {
+  const gameData = [];
+  for (let i = 0; i < questionCounter; i += 1) {
     const num = generator(1, 100);
-    gameData[0].push(num);
-  }
-  for (let i = 0; i < 3; i += 1) {
-    const check = isPrimeChecker(gameData[0][i]);
-    gameData[1].push(check);
+    const check = isPrimeChecker(num);
+    const answer = check ? 'yes' : 'no';
+    gameData.push(cons(num, answer));
   }
   return gameData;
 };

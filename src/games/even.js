@@ -1,8 +1,8 @@
 import { generator, questionCounter } from '../helper.js';
 import engine from '../index.js';
-import {cons, car, cdr} from '../base.js';
+import {cons} from '../base.js';
 
-const even = () => {
+export const evenMaker = () => {
   const gameData = [];
   for (let i = 0; i < questionCounter; i += 1) {
     const question = generator(1, 100);
@@ -13,10 +13,6 @@ const even = () => {
   return gameData;
 };
 
-const evenData = even();
-
 const startMassage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-engine(evenData, startMassage);
-
-export default even;
+engine(evenMaker(), startMassage);

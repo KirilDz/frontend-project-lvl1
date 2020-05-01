@@ -1,7 +1,7 @@
-import { questionCounter } from './helper.js';
 import {car, cdr} from './base.js';
 import readlineSync from "readline-sync";
 
+const questionCounter = 3;
 
 const engine = (data, startMassage) => {
   console.log(startMassage);
@@ -18,12 +18,15 @@ const engine = (data, startMassage) => {
   return congratMassage();
 };
 
-
 const greetingUser = 'Welcome to the Brain Games!\nMay I have your name? ';
 const questionToUser = 'Your answer: ';
+
 const userCommunication = (message) => readlineSync.question(message);
+
 const userName = userCommunication(greetingUser);
+
 const correctAnswer = (userAnswer, rightAnswer) => console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\n Let's try again, ${userName}!`);
+
 const congratMassage = () => console.log(`Congratulations, ${userName}!`);
 
 export default engine;

@@ -1,10 +1,10 @@
-import { generator, questionCounter } from '../helper.js';
+import { generator, cycleCount } from '../helper.js';
 import engine from '../index.js';
 import {cons} from '../base.js';
 
-export const evenMaker = () => {
+const evenMaker = () => {
   const gameData = [];
-  for (let i = 0; i < questionCounter; i += 1) {
+  for (let i = 0; i < cycleCount; i += 1) {
     const question = generator(1, 100);
     const result = question % 2 === 0;
     const correctAnswer = result ? 'yes' : 'no';
@@ -15,4 +15,8 @@ export const evenMaker = () => {
 
 const startMassage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-engine(evenMaker(), startMassage);
+const evenLaunch = engine(evenMaker(), startMassage);
+
+export  default  evenLaunch;
+
+

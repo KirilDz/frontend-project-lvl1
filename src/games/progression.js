@@ -30,6 +30,6 @@ const progressionMaker = () => {
 
 const startMassage = 'What number is missing in the progression?';
 
-const progressionLauncher = engine(progressionMaker(), startMassage);
+const progressionLauncher = engine(progressionMaker, startMassage);
 
 export default progressionLauncher;

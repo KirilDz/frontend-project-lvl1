@@ -28,6 +28,6 @@ const gcdMaker = () => {
 
 const startMassage = 'Find the greatest common divisor of given numbers.';
 
-const gcdLaunch = engine(gcdMaker(), startMassage);
+const gcdLaunch = engine(gcdMaker, startMassage);
 
 export default gcdLaunch;

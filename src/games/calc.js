@@ -10,13 +10,13 @@ const calcMaker = () => {
     const operands = ['+', '-', '*'];
     const operandGenerator = generator(0, operands.length);
     const operand = operands[operandGenerator];
-    const expression = `${num1} ${operand} ${num2}`;
+    const expression = num1 > num2 ? `${num1} ${operand} ${num2}` : `${num2} ${operand} ${num1}`;
     switch (operand) {
       case "+":
         gameData.push(cons(expression, num1+num2));
         break;
       case "-":
-        gameData.push(cons(expression, num1-num2));
+        gameData.push(cons(expression, num1 > num2 ? num1 - num2 : num2 - num1));
         break;
       case "*":
         gameData.push(cons(expression, num1*num2));
@@ -28,6 +28,6 @@ const calcMaker = () => {
 
 const startMassage = 'What is the result of the expression?';
 
-const calcLaunch = engine(calcMaker(), startMassage);
+const calcLaunch = engine(calcMaker, startMassage);
 
 export default calcLaunch;

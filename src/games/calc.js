@@ -1,6 +1,5 @@
-import { generator, cycleCount } from '../helper.js';
+import { generator, cycleCount, cons } from '../helper.js';
 import engine from '../index.js';
-import {cons} from '../base.js';
 
 const calcMaker = () => {
   const gameData = [];
@@ -28,6 +27,6 @@ const calcMaker = () => {
 
 const startMassage = 'What is the result of the expression?';
 
-const calcLaunch = engine(calcMaker, startMassage);
+const calcLaunch = engine(calcMaker(), startMassage);
 
 export default calcLaunch;

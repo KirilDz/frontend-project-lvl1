@@ -1,6 +1,5 @@
-import { generator, cycleCount } from '../helper.js';
+import { generator, cycleCount, cons } from '../helper.js';
 import engine from '../index.js';
-import {cons} from '../base.js';
 
 const isPrime = (num) => {
   if (num < 1) return false;
@@ -24,6 +23,6 @@ const primeMaker = () => {
 
 const startMassage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeLauncher = engine(primeMaker, startMassage);
+const primeLauncher = engine(primeMaker(), startMassage);
 
 export default primeLauncher;

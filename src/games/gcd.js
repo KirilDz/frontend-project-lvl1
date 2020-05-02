@@ -1,6 +1,5 @@
-import { generator, cycleCount } from '../helper.js';
+import { generator, cycleCount, cons } from '../helper.js';
 import engine from '../index.js';
-import {cons} from '../base.js';
 
 const gcdCalculation = (num1, num2) => {
   const smallerNum = num1 > num2 ? num2 : num1;
@@ -12,7 +11,6 @@ const gcdCalculation = (num1, num2) => {
     }
   }
 };
-
 
 const gcdMaker = () => {
   const gameData = [];
@@ -28,6 +26,6 @@ const gcdMaker = () => {
 
 const startMassage = 'Find the greatest common divisor of given numbers.';
 
-const gcdLaunch = engine(gcdMaker, startMassage);
+const gcdLaunch = engine(gcdMaker(), startMassage);
 
 export default gcdLaunch;

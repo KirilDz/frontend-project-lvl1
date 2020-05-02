@@ -1,6 +1,5 @@
-import { generator, cycleCount } from '../helper.js';
+import { generator, cycleCount, cons } from '../helper.js';
 import engine from '../index.js';
-import {cons} from '../base.js';
 
 const evenMaker = () => {
   const gameData = [];
@@ -15,7 +14,7 @@ const evenMaker = () => {
 
 const startMassage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const evenLaunch = engine(evenMaker, startMassage);
+const evenLaunch = engine(evenMaker(), startMassage);
 
 export  default  evenLaunch;
 

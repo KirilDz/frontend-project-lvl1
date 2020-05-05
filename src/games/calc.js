@@ -1,9 +1,9 @@
-import { generator, cycleCount, cons } from '../helper.js';
-import engine from '../index.js';
+import { generator, cons } from '../helper.js';
+import { engine, questionCounter } from '../index.js';
 
 const calcMaker = () => {
   const gameData = [];
-  for (let i = 0; i < cycleCount; i += 1) {
+  for (let i = 0; i < questionCounter; i += 1) {
     const num1 = generator(1, 100);
     const num2 = generator(1, 100);
     const operands = ['+', '-', '*'];
@@ -11,15 +11,17 @@ const calcMaker = () => {
     const operand = operands[operandGenerator];
     const expression = num1 > num2 ? `${num1} ${operand} ${num2}` : `${num2} ${operand} ${num1}`;
     switch (operand) {
-      case "+":
-        gameData.push(cons(expression, num1+num2));
+      case '+':
+        gameData.push(cons(expression, num1 + num2));
         break;
-      case "-":
+      case '-':
         gameData.push(cons(expression, num1 > num2 ? num1 - num2 : num2 - num1));
         break;
-      case "*":
-        gameData.push(cons(expression, num1*num2));
+      case '*':
+        gameData.push(cons(expression, num1 * num2));
         break;
+      default:
+        return null;
     }
   }
   return gameData;

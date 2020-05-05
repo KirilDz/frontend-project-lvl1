@@ -1,10 +1,10 @@
-import { generator, cycleCount, cons } from '../helper.js';
-import engine from '../index.js';
+import { generator, cons } from '../helper.js';
+import { engine, questionCounter } from '../index.js';
 
 const isPrime = (num) => {
   if (num < 1) return false;
 
-  for (let i = 2; i <= num/2; i += 1) {
+  for (let i = 2; i <= num / 2; i += 1) {
     if (num % i === 0) return false;
   }
   return true;
@@ -12,7 +12,7 @@ const isPrime = (num) => {
 
 const primeMaker = () => {
   const gameData = [];
-  for (let i = 0; i < cycleCount; i += 1) {
+  for (let i = 0; i < questionCounter; i += 1) {
     const question = generator(1, 100);
     const check = isPrime(question);
     const answer = check ? 'yes' : 'no';

@@ -10,19 +10,21 @@ const calcMaker = () => {
     const operandGenerator = generator(0, operands.length);
     const operand = operands[operandGenerator];
     const expression = num1 > num2 ? `${num1} ${operand} ${num2}` : `${num2} ${operand} ${num1}`;
+    let result = 0;
     switch (operand) {
       case '+':
-        gameData.push(cons(expression, num1 + num2));
+        result = num1 + num2;
         break;
       case '-':
-        gameData.push(cons(expression, num1 > num2 ? num1 - num2 : num2 - num1));
+        result = num1 > num2 ? num1 - num2 : num2 - num1;
         break;
       case '*':
-        gameData.push(cons(expression, num1 * num2));
+        result = num1 * num2;
         break;
       default:
         return null;
     }
+    gameData.push(cons(expression, result));
   }
   return gameData;
 };

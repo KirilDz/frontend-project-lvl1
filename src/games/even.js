@@ -1,5 +1,5 @@
 import { generator, cons } from '../helper.js';
-import { engine, questionCounter} from '../index.js';
+import { engine, questionCounter } from '../index.js';
 
 const evenMaker = () => {
   const gameData = [];

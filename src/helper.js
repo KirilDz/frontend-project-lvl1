@@ -1,4 +1,4 @@
-export const generator = (min, max) => Math.round(Math.random() * (max - min) + min);
+export const generator = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 export const cycleCount = 3;
 

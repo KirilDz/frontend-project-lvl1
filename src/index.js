@@ -6,12 +6,15 @@ const userCommunication = (message) => readlineSync.question(message);
 const questionToUser = 'Your answer: ';
 const correctAnswer = (userAnswer, rightAnswer) => console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\n Let's try again, ${userName}!`);
 const congratMassage = () => console.log(`Congratulations, ${userName}!`);
+const greetingUser = 'Welcome to the Brain Games!\nMay I have your name? ';
 const userName = userCommunication(greetingUser);
 
-const engine = (gameData, startMassage) => {
+
+export const engine = (gameData, startMassage) => {
   console.log(startMassage);
   for (let i = 0; i < questionCounter; i += 1) {
-    console.log(`Question: ${car(gameData[i])}`);
+    const question = `Question: ${car(gameData[i])}`;
+    console.log(question);
     const userAnswer = userCommunication(questionToUser);
     if (userAnswer === `${cdr(gameData[i])}`) {
       console.log('Correct!');
@@ -22,7 +25,3 @@ const engine = (gameData, startMassage) => {
   }
   return congratMassage();
 };
-
-const greetingUser = 'Welcome to the Brain Games!\nMay I have your name? ';
-
-export default engine;

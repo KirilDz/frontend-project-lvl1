@@ -24,8 +24,14 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
+      
+    - name: npm install, build
+      run: |
+        make install
+      env:
+          CI: true
     - name: Run linter
-        # Run Linter
       run: |
         make lint
+    - name: Test & publish code coverage
+      uses: paambaati/codeclimate-action@v2.6.0

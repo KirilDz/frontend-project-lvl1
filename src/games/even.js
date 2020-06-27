@@ -14,6 +14,6 @@ const evenMaker = () => {
 
 const startMassage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const evenLaunch = engine(evenMaker(), startMassage);
+const runEven = engine(evenMaker(), startMassage);
 
-export default evenLaunch;
+export default runEven;

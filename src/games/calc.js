@@ -31,6 +31,6 @@ const calcMaker = () => {
 
 const startMassage = 'What is the result of the expression?';
 
-const calcLaunch = engine(calcMaker(), startMassage);
+const runCalc = engine(calcMaker(), startMassage);
 
-export default calcLaunch;
+export default runCalc;

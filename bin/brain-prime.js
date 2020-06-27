@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import primeLauncher from '../src/games/isPrime.js';
+import runPrime from '../src/games/isPrime.js';
 
-primeLauncher();
+runPrime;

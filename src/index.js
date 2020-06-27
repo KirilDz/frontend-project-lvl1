@@ -21,5 +21,4 @@ export const engine = (gameData, startMassage) => {
     }
   }
   console.log(`Congratulations, ${userName}!`);
-  return;
 };

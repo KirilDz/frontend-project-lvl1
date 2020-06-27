@@ -1,7 +1,6 @@
 # frontend-project-lvl1
 <a href="https://codeclimate.com/github/KirilDz/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/c2402a60a205a6a084da/maintainability" /></a>
 <a href="https://codeclimate.com/github/KirilDz/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c2402a60a205a6a084da/test_coverage" /></a>
-
 ![Node CI](https://github.com/KirilDz/frontend-project-lvl1/workflows/Node%20CI/badge.svg)
 <br>
 brain-even, установка, запуск, вывод. 

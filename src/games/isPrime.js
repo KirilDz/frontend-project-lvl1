@@ -23,6 +23,6 @@ const primeMaker = () => {
 
 const startMassage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const runPrime = engine(primeMaker(), startMassage);
+const runPrime = () => engine(primeMaker(), startMassage);
 
 export default runPrime;

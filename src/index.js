@@ -1,27 +1,31 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from './helper.js';
+import { car, cdr } from './utils.js';
 
-export const questionCounter = 3;
+export const maxNumberOfRounds = 3;
 
-export const engine = (gameData, startMassage) => {
-  const userCommunication = readlineSync.question;
-  const userName = userCommunication('Welcome to the Brain Games!\nMay I have your name? ');
+export const engine = (gameFunction, startMassage) => {
+  const userName = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
 
   console.log(startMassage);
 
-  for (let i = 0; i < questionCounter; i += 1) {
-    const question = `Question: ${car(gameData[i])}`;
-    console.log(question);
-    const userAnswer = userCommunication('Your answer: ');
+  let i = 0;
 
-    if (userAnswer === `${cdr(gameData[i])}`) {
+  while (i < maxNumberOfRounds) {
+    const gameData = gameFunction();
+    const question = `Question: ${car(gameData)}`;
+    console.log(question);
+    const correctAnswer = cdr(gameData).toString();
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
     }
 
-    if (userAnswer !== `${cdr(gameData[i])}`) {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${cdr(gameData[i])}".\n Let's try again, ${userName}!`);
+    if (userAnswer !== correctAnswer) {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\n Let's try again, ${userName}!`);
       return;
     }
+
+    i += 1;
   }
   console.log(`Congratulations, ${userName}!`);
 };

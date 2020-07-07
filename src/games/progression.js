@@ -1,5 +1,5 @@
-import { generator, cons } from '../helper.js';
-import { engine, questionCounter } from '../index.js';
+import { getRandomNumber, cons } from '../utils.js';
+import { engine } from '../index.js';
 
 const progressionLength = 10;
 
@@ -12,21 +12,17 @@ const progressionCreator = (startProgression, stepProgression) => {
 };
 
 const progressionMaker = () => {
-  const gameData = [];
-  for (let i = 0; i < questionCounter; i += 1) {
-    const startProgression = generator(1, 100);
-    const stepProgression = generator(2, 9);
-    const progression = progressionCreator(startProgression, stepProgression);
-    const hiddenIndex = generator(0, progression.length - 1);
-    const result = progression[hiddenIndex];
-    progression[hiddenIndex] = '..';
-    gameData.push(cons(progression, result));
-  }
-  return gameData;
+  const startProgression = getRandomNumber(1, 100);
+  const stepProgression = getRandomNumber(2, 9);
+  const progression = progressionCreator(startProgression, stepProgression);
+  const hiddenIndex = getRandomNumber(0, progression.length - 1);
+  const result = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
+  return cons(progression, result);
 };
 
-const startMassage = 'What number is missing in the progression?';
+const startMessage = 'What number is missing in the progression?';
 
-const runProgression = () => engine(progressionMaker(), startMassage);
+const runProgression = () => engine(progressionMaker, startMessage);
 
 export default runProgression;

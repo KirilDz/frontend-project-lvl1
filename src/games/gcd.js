@@ -1,5 +1,5 @@
-import { generator, cons } from '../helper.js';
-import { engine, questionCounter } from '../index.js';
+import { getRandomNumber, cons } from '../utils.js';
+import { engine } from '../index.js';
 
 const gcdCalculation = (num1, num2) => {
   const smallerNum = num1 > num2 ? num2 : num1;
@@ -14,19 +14,15 @@ const gcdCalculation = (num1, num2) => {
 };
 
 const gcdMaker = () => {
-  const gameData = [];
-  for (let i = 0; i < questionCounter; i += 1) {
-    const num1 = generator(1, 100);
-    const num2 = generator(1, 100);
-    const expression = `${num1} ${num2}`;
-    const result = gcdCalculation(num1, num2);
-    gameData.push(cons(expression, result));
-  }
-  return gameData;
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const expression = `${num1} ${num2}`;
+  const result = gcdCalculation(num1, num2);
+  return cons(expression, result);
 };
 
-const startMassage = 'Find the greatest common divisor of given numbers.';
+const startMessage = 'Find the greatest common divisor of given numbers.';
 
-const runGcd = () => engine(gcdMaker(), startMassage);
+const runGcd = () => engine(gcdMaker, startMessage);
 
 export default runGcd;

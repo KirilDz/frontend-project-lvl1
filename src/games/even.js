@@ -1,19 +1,15 @@
-import { generator, cons } from '../helper.js';
-import { engine, questionCounter } from '../index.js';
+import { getRandomNumber, cons } from '../utils.js';
+import { engine } from '../index.js';
 
 const evenMaker = () => {
-  const gameData = [];
-  for (let i = 0; i < questionCounter; i += 1) {
-    const question = generator(1, 100);
-    const result = question % 2 === 0;
-    const correctAnswer = result ? 'yes' : 'no';
-    gameData.push(cons(question, correctAnswer));
-  }
-  return gameData;
+  const question = getRandomNumber(1, 100);
+  const result = question % 2 === 0;
+  const correctAnswer = result ? 'yes' : 'no';
+  return cons(question, correctAnswer);
 };
 
-const startMassage = 'Answer "yes" if the number is even, otherwise answer "no".';
+const startMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const runEven = () => engine(evenMaker(), startMassage);
+const runEven = () => engine(evenMaker, startMessage);
 
 export default runEven;

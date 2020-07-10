@@ -1,20 +1,14 @@
-import { getRandomNumber, cons } from '../utils.js';
+import { getRandomNumber, cons, getRandomElement } from '../utils.js';
 import { engine } from '../index.js';
 
-const calcMaker = () => {
-  const num1 = getRandomNumber(1, 100);
-  const num2 = getRandomNumber(1, 100);
-  const operands = ['+', '-', '*'];
-  const operandGenerator = getRandomNumber(0, operands.length - 1);
-  const operand = operands[operandGenerator];
-  const expression = num1 > num2 ? `${num1} ${operand} ${num2}` : `${num2} ${operand} ${num1}`;
+const getResult = (num1, num2, operand) => {
   let result = 0;
   switch (operand) {
     case '+':
       result = num1 + num2;
       break;
     case '-':
-      result = num1 > num2 ? num1 - num2 : num2 - num1;
+      result = num1 - num2;
       break;
     case '*':
       result = num1 * num2;
@@ -22,11 +16,21 @@ const calcMaker = () => {
     default:
       return null;
   }
-  return cons(expression, result);
+  return result;
 };
 
-const startMessage = 'What is the result of the expression?';
+const generateExpression = () => {
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const operands = ['+', '-', '*'];
+  const operand = operands[getRandomElement(0, operands)];
+  const expression = `${num1} ${operand} ${num2}`;
+  const expressionResult = getResult(num1, num2, operand);
+  return cons(expression, expressionResult.toString());
+};
 
-const runCalc = () => engine(calcMaker, startMessage);
+const gameRule = 'What is the result of the expression?';
+
+const runCalc = () => engine(generateExpression, gameRule);
 
 export default runCalc;

@@ -1,9 +1,8 @@
 import pairs from '@hexlet/pairs';
-
-const { cons } = pairs;
 import { getRandomNumber } from '../utils.js';
 import { engine } from '../index.js';
 
+const { cons } = pairs;
 
 const isEven = (num) => num % 2 === 0;
 

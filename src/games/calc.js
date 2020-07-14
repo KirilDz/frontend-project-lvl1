@@ -1,7 +1,8 @@
 import pairs from '@hexlet/pairs';
-const { cons } = pairs;
 import { getRandomNumber, getRandomArrayItem } from '../utils.js';
 import { engine } from '../index.js';
+
+const { cons } = pairs;
 
 const calculate = (num1, num2, operand) => {
   switch (operand) {

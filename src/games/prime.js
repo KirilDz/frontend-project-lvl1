@@ -1,17 +1,18 @@
+import pairs from '@hexlet/pairs';
 import { getRandomNumber } from '../utils.js';
 import { engine } from '../index.js';
-import pairs from '@hexlet/pairs';
-const {cons} = pairs;
+
+const { cons } = pairs;
 
 const isPrime = (num) => {
   if (num < 2) {
-    return false
-  };
+    return false;
+  }
 
   for (let i = 2; i <= num / 2; i += 1) {
     if (num % i === 0) {
-      return false
-    };
+      return false;
+    }
   }
   return true;
 };

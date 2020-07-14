@@ -1,7 +1,8 @@
-import { getRandomNumber} from '../utils.js';
-import { engine } from '../index.js';
 import pairs from '@hexlet/pairs';
-const {cons} = pairs;
+import { getRandomNumber } from '../utils.js';
+import { engine } from '../index.js';
+
+const { cons } = pairs;
 
 const calculateGcd = (num1, num2) => {
   const smallerNum = Math.min(num1, num2);

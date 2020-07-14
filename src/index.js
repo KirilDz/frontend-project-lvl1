@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from './utils.js';
+import pairs from '@hexlet/pairs';
+const {car, cdr} = pairs;
+
 
 export const maxNumberOfRounds = 3;
 

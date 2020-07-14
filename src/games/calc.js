@@ -1,36 +1,33 @@
-import { getRandomNumber, cons, getRandomElement } from '../utils.js';
+import pairs from '@hexlet/pairs';
+const { cons } = pairs;
+import { getRandomNumber, getRandomArrayItem } from '../utils.js';
 import { engine } from '../index.js';
 
-const getResult = (num1, num2, operand) => {
-  let result = 0;
+const calculate = (num1, num2, operand) => {
   switch (operand) {
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      result = num1 * num2;
-      break;
+      return num1 * num2;
     default:
       return null;
   }
-  return result;
 };
 
-const generateExpression = () => {
+const generateRound = () => {
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
   const operands = ['+', '-', '*'];
-  const operand = operands[getRandomElement(0, operands)];
-  const expression = `${num1} ${operand} ${num2}`;
-  const expressionResult = getResult(num1, num2, operand);
-  return cons(expression, expressionResult.toString());
+  const operand = getRandomArrayItem(operands);
+  const question = `${num1} ${operand} ${num2}`;
+  const correctAnswer = calculate(num1, num2, operand);
+  return cons(question, correctAnswer.toString());
 };
 
 const gameRule = 'What is the result of the expression?';
 
-const runCalc = () => engine(generateExpression, gameRule);
+const runCalc = () => engine(generateRound, gameRule);
 
 export default runCalc;

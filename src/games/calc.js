@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomNumber, getRandomArrayItem } from '../utils.js';
-import { engine } from '../index.js';
+import runGame from '../index.js';
 
 const { cons } = pairs;
 
@@ -29,6 +29,6 @@ const generateRound = () => {
 
 const gameRule = 'What is the result of the expression?';
 
-const runCalc = () => engine(generateRound, gameRule);
+const runCalc = () => runGame(generateRound, gameRule);
 
 export default runCalc;

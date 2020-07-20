@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomNumber } from '../utils.js';
-import { engine } from '../index.js';
+import runGame from '../index.js';
 
 const { cons } = pairs;
 
@@ -18,13 +18,13 @@ const isPrime = (num) => {
 };
 
 const generatePrime = () => {
-  const question = getRandomNumber(1, 100).toString();
+  const question = getRandomNumber(1, 100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const runPrime = () => engine(generatePrime, gameRule);
+const runPrime = () => runGame(generatePrime, gameRule);
 
 export default runPrime;

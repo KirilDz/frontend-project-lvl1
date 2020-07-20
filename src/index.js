@@ -3,10 +3,9 @@ import pairs from '@hexlet/pairs';
 
 const { car, cdr } = pairs;
 
+const maxNumberOfRounds = 3;
 
-export const maxNumberOfRounds = 3;
-
-export const engine = (generateRound, gameRule) => {
+export default (generateRound, gameRule) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name? ');

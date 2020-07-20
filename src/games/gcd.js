@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomNumber } from '../utils.js';
-import { engine } from '../index.js';
+import runGame from '../index.js';
 
 const { cons } = pairs;
 
@@ -24,6 +24,6 @@ const generateGcdExp = () => {
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const runGcd = () => engine(generateGcdExp, gameRule);
+const runGcd = () => runGame(generateGcdExp, gameRule);
 
 export default runGcd;

@@ -32,11 +32,11 @@
 
 <b>Демонстрация работы игр:</b>
 <ul>
-  <li>Brain calc <a href="https://asciinema.org/a/76cD5m7GJt3WTrv3aALT925YJ" target="_blank"><img src="https://asciinema.org/a/76cD5m7GJt3WTrv3aALT925YJ.svg" /></a></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>Калькулятор: <a href="https://asciinema.org/a/76cD5m7GJt3WTrv3aALT925YJ" target="_blank"><img src="https://asciinema.org/a/76cD5m7GJt3WTrv3aALT925YJ.svg" /></a></li>
+  <li>Прогрессия: <a href="https://asciinema.org/a/KwkDv6XTAUG46Zw1XJI1zvSWg" target="_blank"><img src="https://asciinema.org/a/KwkDv6XTAUG46Zw1XJI1zvSWg.svg" /></a></li>
+  <li>Четность: <a href="https://asciinema.org/a/zWWrn5yjQx3PWRZQ085RJqBIB" target="_blank"><img src="https://asciinema.org/a/zWWrn5yjQx3PWRZQ085RJqBIB.svg" /></a></li>
+  <li>НОД: <a href="https://asciinema.org/a/eeaGVsW3YaHHLjWfZQ96w51Yo" target="_blank"><img src="https://asciinema.org/a/eeaGVsW3YaHHLjWfZQ96w51Yo.svg" /></a></li>
+  <li>Простое число: </li>
 </ul>
 brain-calc
 https://asciinema.org/a/UINd8gFZlpX7Vb569g2Fvce1g

@@ -16,16 +16,16 @@
     <li>Скачиваем Brain Games</li>
     <li>С корня проекта вводим комманду в консоль <b>npm link</b></li>
   </ul>
-Игры готовы для использования.
+Приложение готово для использования!
 
 <br>
 <b>Для запуска игр, вводим в консоль следующие комманды:</b>
 <ul>
-  <li>Калькулятор - brain-calc</li>
-  <li>Прогрессия - bran-porgression</li>
-  <li>Четность - brain-even</li>
-  <li>НОД - brain-gcd</li>
-  <li>Простое число - brain-prime</li>
+  <li>Калькулятор - <b>brain-calc</b></li>
+  <li>Прогрессия - <b>bran-porgression</b></li>
+  <li>Четность - <b>brain-even</b></li>
+  <li>НОД - <b>brain-gcd</b></li>
+  <li>Простое число - <b>brain-prime</b></li>
 </ul>
   
 <br>

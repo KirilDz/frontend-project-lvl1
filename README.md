@@ -30,8 +30,14 @@
   
 <br>
 
-https://asciinema.org/a/bDWHWDUxqgROkkWQOyKvxSVDI
-
+<b>Демонстрация работы игр:</b>
+<ul>
+  <li>Brain calc <a href="https://asciinema.org/a/76cD5m7GJt3WTrv3aALT925YJ" target="_blank"><img src="https://asciinema.org/a/76cD5m7GJt3WTrv3aALT925YJ.svg" /></a></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 brain-calc
 https://asciinema.org/a/UINd8gFZlpX7Vb569g2Fvce1g
 

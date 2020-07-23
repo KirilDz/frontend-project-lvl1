@@ -15,13 +15,11 @@ const getQuestion = (start, step, index) => {
 };
 
 const generateProgression = () => {
-  const startProgression = getRandomNumber(1, 100);
-  const stepProgression = getRandomNumber(2, 9);
+  const startNum = getRandomNumber(1, 100);
+  const progressionStep = getRandomNumber(2, 9);
   const hiddenIndex = getRandomNumber(1, progressionLength);
-  const question = getQuestion(startProgression, stepProgression, hiddenIndex);
-  const answer = question[hiddenIndex] !== question[question.length - 1]
-    ? question[hiddenIndex + 1] - stepProgression
-    : question[hiddenIndex - 1] + stepProgression;
+  const question = getQuestion(startNum, progressionStep, hiddenIndex);
+  const answer = startNum + progressionStep * hiddenIndex;
   return cons(question.join(' '), answer.toString());
 };
 

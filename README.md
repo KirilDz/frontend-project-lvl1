@@ -11,12 +11,26 @@
 <b>Простое число</b> - определение простого числа.
 <br>
 
-<b>Установка:/b>
+<b>Установка:</b>
   <ul>
     <li>Скачиваем Brain Games</li>
     <li>С корня проекта вводим комманду в консоль <b>npm link</b></li>
   </ul>
+  <br>
 Игры готовы для использования.
+<br>
+
+<b>Для запуска игр, вводим в консоль следующие комманды:</b>
+ <br>
+<ul>
+  <li>Калькулятор - brain-calc</li>
+  <li>Прогрессия - bran-porgression</li>
+  <li>Четность - brain-even</li>
+  <li>НОД - brain-gcd</li>
+  <li>Простое число - brain-prime</li>
+</ul>
+  
+<br>
 
 https://asciinema.org/a/bDWHWDUxqgROkkWQOyKvxSVDI
 

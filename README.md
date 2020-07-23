@@ -11,6 +11,13 @@
 <b>Простое число</b> - определение простого числа.
 <br>
 
+<b>Установка:/b>
+  <ul>
+    <li>Скачиваем Brain Games</li>
+    <li>С корня проекта вводим комманду в консоль <b>npm link</b></li>
+  </ul>
+Игры готовы для использования.
+
 https://asciinema.org/a/bDWHWDUxqgROkkWQOyKvxSVDI
 
 brain-calc

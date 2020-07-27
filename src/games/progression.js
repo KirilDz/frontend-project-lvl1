@@ -14,9 +14,9 @@ const getQuestion = (start, step, index) => {
   return question;
 };
 
-const generateProgression = () => {
+const genGameData = () => {
   const startNum = getRandomNumber(1, 100);
-  const progressionStep = getRandomNumber(2, 9);
+  const progressionStep = getRandomNumber(2, progressionLength - 1);
   const hiddenIndex = getRandomNumber(1, progressionLength);
   const question = getQuestion(startNum, progressionStep, hiddenIndex);
   const answer = startNum + progressionStep * hiddenIndex;
@@ -25,8 +25,6 @@ const generateProgression = () => {
 
 const gameRule = 'What number is missing in the progression?';
 
-generateProgression();
-
-const runProgression = () => runGame(generateProgression, gameRule);
+const runProgression = () => runGame(genGameData, gameRule);
 
 export default runProgression;

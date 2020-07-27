@@ -6,7 +6,7 @@ const { cons } = pairs;
 
 const isEven = (num) => num % 2 === 0;
 
-const generateEven = () => {
+const genGameData = () => {
   const question = getRandomNumber(1, 100);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
@@ -14,6 +14,6 @@ const generateEven = () => {
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const runEven = () => runGame(generateEven, gameRule);
+const runEven = () => runGame(genGameData, gameRule);
 
 export default runEven;

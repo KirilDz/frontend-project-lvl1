@@ -1,6 +1,6 @@
 # frontend-project-lvl1
 <a href="https://codeclimate.com/github/KirilDz/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/c2402a60a205a6a084da/maintainability" /></a>
-<a href="https://github.com/KirilDz/frontend-project-lvl1/actions?query=workflow%3A%22Node+CI%22" target="_blank">
+<a href="https://github.com/KirilDz/frontend-project-lvl1/actions?query=workflow%3A%22Lint" target="_blank">
 ![Node CI](https://github.com/KirilDz/frontend-project-lvl1/workflows/Lint/badge.svg)</a>
 <br>
 <b>«Игры разума»</b> — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для <i>прокачки мозга</i>. Каждая игра задает вопросы, на которые нужно дать <b>правильные ответы</b>. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. <br><b>Игры:</b></br>
